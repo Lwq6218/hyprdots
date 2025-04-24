@@ -1,10 +1,9 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
-
 -- 自定义的 lazy.nvim 安装路径
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
--- 如果 lazy.nvim 不存在，则通过 Git 克隆它到指定路径
+-- 如果lazy.nvim不存在，则通过 Git 克隆它到指定路径
 if not vim.uv.fs_stat(lazypath) then
   local repo = "https://github.com/folke/lazy.nvim.git"
   vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
