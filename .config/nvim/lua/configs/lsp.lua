@@ -140,7 +140,6 @@ local nvlsp = require "nvchad.configs.lspconfig"
 local servers = {
   -- clangd = {},
   -- gopls = {},
-  pyright = {},
   -- rust_analyzer = {},
   -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
   --
@@ -149,11 +148,22 @@ local servers = {
   --
   -- But for many setups, the LSP (`ts_ls`) will work just fine
   -- ts_ls = {},
-  --
-  lua_ls = {},
+  -- Python
+
+  pyright = {},
+  ruff = {},
+  -- React
+  vtsls = {},
+  prettierd = {},
+  tailwindcss = {},
+  eslint_d = {},
+  --Bash
   bashls = {
     filetypes = { "sh", "zsh", "bash" },
   },
+
+  --Lua
+  lua_ls = {},
 }
 
 local ensure_installed = vim.tbl_keys(servers or {})

@@ -4,21 +4,20 @@ local conform = require "conform"
 
 local options = {
   formatters_by_ft = {
-    astro = { "stylelint", "prettierd", "eslint_d" },
     bash = { "shellcheck", "shfmt" },
+    sh = { "shellcheck", "shfmt" },
+    zsh = { "shellcheck" },
     c = { "clang-format", lsp_format = "last" },
-    clojure = { "zprint" },
     cpp = { "clang-format", lsp_format = "last" },
-    cs = { "csharpier" }, -- C#
-    csh = { "shellcheck", "shfmt" },
-    css = { "stylelint", "prettierd" },
-    elm = { "elm_format" },
+    javascript = { "prettierd", "eslint_d" },
+    javascriptreact = { "prettierd", "eslint_d" },
+    typescript = { "prettierd", "eslint_d" },
+    typescriptreact = { "prettierd", "eslint_d" },
+    vue = { "prettierd", "eslint_d" },
+    css = { "prettierd" },
     go = { "goimports", "gofmt" },
-    haskell = { "ormolu" },
     html = { "prettierd" },
     java = { "google-java-format" },
-    javascript = { "stylelint", "prettierd", "eslint_d" },
-    javascriptreact = { "stylelint", "prettierd", "eslint_d" },
     ksh = { "shellcheck", "shfmt" },
     lua = { "stylua" },
     mksh = { "shellcheck", "shfmt" },
@@ -29,15 +28,7 @@ local options = {
         return { "isort", "black" }
       end
     end,
-    ruby = { "rubocop" },
     rust = { "rustfmt" },
-    sh = { "shellcheck", "shfmt" },
-    svelte = { "stylelint", "prettierd", "eslint_d" },
-    tcsh = { "shellcheck", "shfmt" },
-    typescript = { "stylelint", "prettierd", "eslint_d" },
-    typescriptreact = { "stylelint", "prettierd", "eslint_d" },
-    vue = { "stylelint", "prettierd", "eslint_d" },
-    zsh = { "shellcheck", "shfmt" },
   },
 
   format_on_save = {

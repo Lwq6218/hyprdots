@@ -8,7 +8,6 @@ M.treesitter = {
     "diff",
     "html",
     "css",
-    "json",
     "lua",
     "luadoc",
     "markdown",
@@ -16,6 +15,10 @@ M.treesitter = {
     "query",
     "vim",
     "vimdoc",
+    "json",
+    "javascript",
+    "typescript",
+    "tsx",
   },
   -- Autoinstall languages that are not installed
   auto_install = true,
