@@ -1,7 +1,7 @@
----@type LazySpec
 return {
   "stevearc/conform.nvim",
-  lazy = false,
+  event = { "BufWritePre" },
+  cmd = { "ConformInfo" },
   opts = function()
     return require "configs.conform"
   end,

@@ -2,7 +2,6 @@
 ---@diagnostic disable-next-line: assign-type-mismatch
 local conform = require "conform"
 
----@type conform.setupOpts
 local options = {
   formatters_by_ft = {
     astro = { "stylelint", "prettierd", "eslint_d" },
@@ -21,7 +20,7 @@ local options = {
     javascript = { "stylelint", "prettierd", "eslint_d" },
     javascriptreact = { "stylelint", "prettierd", "eslint_d" },
     ksh = { "shellcheck", "shfmt" },
-    lua = { "stylua" }, -- Stylua is already configured as the default formatter for Lua in NvChad, but keeping it here for reference
+    lua = { "stylua" },
     mksh = { "shellcheck", "shfmt" },
     python = function(bufnr)
       if conform.get_formatter_info("ruff_format", bufnr).available then
@@ -38,7 +37,7 @@ local options = {
     typescript = { "stylelint", "prettierd", "eslint_d" },
     typescriptreact = { "stylelint", "prettierd", "eslint_d" },
     vue = { "stylelint", "prettierd", "eslint_d" },
-    zsh = { "shellcheck" },
+    zsh = { "shellcheck", "shfmt" },
   },
 
   format_on_save = {
