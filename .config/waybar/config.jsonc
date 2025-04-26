@@ -237,32 +237,32 @@
     },
 
     "custom/wallchange": {
-        "format": "󰟾{}",
+        "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "swwwallpaper.sh -n",
+        "on-click": "~/.config/hypr/scripts/wallpaper-switcher.sh --same",
         "on-click-right": "swwwallpaper.sh -p",
         "on-click-middle": "sleep 0.1 && swwwallselect.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },
 
-    "custom/theme": {
-        "format": "{}",
-        "rotate": 0,
-        "exec": "echo ; echo 󰟡 switch theme",
-        "on-click": "themeswitch.sh -n",
-        "on-click-right": "themeswitch.sh -p",
-        "on-click-middle": "sleep 0.1 && themeselect.sh",
-        "interval" : 86400, // once every day
-        "tooltip": true
-    },
+    // "custom/theme": {
+    //     "format": "{}",
+    //     "rotate": 0,
+    //     "exec": "echo ; echo 󰟡 switch theme",
+    //     "on-click": "themeswitch.sh -n",
+    //     "on-click-right": "themeswitch.sh -p",
+    //     "on-click-middle": "sleep 0.1 && themeselect.sh",
+    //     "interval" : 86400, // once every day
+    //     "tooltip": true
+    // },
 
     "custom/wbar": {
         "format": "{}", //    //
         "rotate": 0,
         "exec": "echo ; echo  switch bar //  dock",
-        "on-click": "wbarconfgen.sh n",
+        "on-click": "~/.config/hypr/scripts/waybar-switcher.sh",
         "on-click-right": "wbarconfgen.sh p",
         "on-click-middle": "sleep 0.1 && quickapps.sh kitty firefox spotify code dolphin",
         "interval" : 86400,
@@ -271,13 +271,13 @@
 
     "custom/cliphist": {
         "format": "{}",
-        // "rotate": 0,
-        // "exec": "echo ; echo 󰅇 clipboard history",
-        // "on-click": "sleep 0.1 && cliphist.sh -c",
-        // "on-click-right": "sleep 0.1 && cliphist.sh -d",
-        // "on-click-middle": "sleep 0.1 && cliphist.sh -w",
-        // "interval" : 86400, // once every day
-        // "tooltip": true
+        "rotate": 0,
+        "exec": "echo ; echo 󰅇 clipboard history",
+        "on-click": "sleep 0.1 && ~/.config/rofi/clipboard.sh -c",
+        "on-click-right": "sleep 0.1 && ~/.config/rofi/clipboard.sh -d",
+        "on-click-middle": "sleep 0.1 &&  ~/.config/rofi/clipboard.sh -w",
+        "interval" : 86400, // once every day
+        "tooltip": true
     },
 
     "custom/power": {
