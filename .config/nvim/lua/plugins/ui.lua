@@ -1,6 +1,7 @@
 return {
   { -- Override `nvim-tree` plugin
     "nvim-tree/nvim-tree.lua",
+    lazy = false,
     opts = require("configs.ui").nvim_tree,
   },
   {

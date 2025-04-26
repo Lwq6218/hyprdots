@@ -20,13 +20,13 @@ map({ "n", "i", "v" }, "<C-y>", "<cmd> redo <cr>", { desc = "history redo" })
 --     vim.cmd "Telescope current_buffer_fuzzy_find"
 --   end
 -- end, { desc = "search search in current buffer" })
-map({ "n", "i", "v" }, "<A-f>", function()
-  if vim.bo.filetype == "TelescopePrompt" then
-    vim.cmd "q!"
-  else
-    vim.cmd "Telescope live_grep"
-  end
-end, { desc = "search search across project" })
+-- map({ "n", "i", "v" }, "<A-f>", function()
+--   if vim.bo.filetype == "TelescopePrompt" then
+--     vim.cmd "q!"
+--   else
+--     vim.cmd "Telescope live_grep"
+--   end
+-- end, { desc = "search search across project" })
 
 map({ "n", "i", "v", "t" }, "<A-v>", function()
   require("nvchad.term").toggle { pos = "vsp", id = "vtoggleTerm" }

@@ -32,6 +32,22 @@ vim.api.nvim_create_autocmd("QuitPre", {
   end,
 })
 
+-- Wsl clipboard
+if vim.fn.has "wsl" == 1 then
+  vim.g.clipboard = {
+    name = "WslClipboard",
+    copy = {
+      ["+"] = "clip.exe",
+      ["*"] = "clip.exe",
+    },
+    paste = {
+      ["+"] = 'pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+      ["*"] = 'pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    },
+    cache_enabled = 0,
+  }
+end
+
 local function augroup(name)
   return vim.api.nvim_create_augroup("nvchad_" .. name, { clear = true })
 end

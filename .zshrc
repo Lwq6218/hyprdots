@@ -43,6 +43,8 @@ if [[ -x "$(command -v bat)" ]]; then
 fi
 
 if [[ -x "$(command -v fzf)" ]]; then
+  # Use \ as the trigger sequence instead of the default **
+  export FZF_COMPLETION_TRIGGER='\'
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	  --info=inline-right \
 	  --ansi \
@@ -314,9 +316,6 @@ source <(fzf --zsh)
 # Zoxide config for zsh plugins 
 # eval "$(zoxide init --cmd cd zsh)"
 
-
-# Tmuxifier config for zsh plugins  
-# eval "$(tmuxifier init -)"
 
 # pnpm
 export PNPM_HOME="/home/lwq/.local/share/pnpm"
